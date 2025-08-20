@@ -18,21 +18,21 @@ Este repositório contém os \*\*dados\*\* e \*\*scripts de aula\*\* do curso de
 
 
 
-\## Estrutura
+## Estrutura
 
-\- `dados/` → bases de dados fictícias usadas nas aulas.
+- `dados/` → bases de dados fictícias usadas nas aulas.
 
-\- `scripts/` → códigos prontos para você rodar no R.
+- `scripts/` → códigos prontos para você rodar no R.
 
 
 
-\## Observação
+## Observação
 
-\- Não é necessário instalar bibliotecas extras.
+- Não é necessário instalar bibliotecas extras.
 
-\- O material para estudo(scripts) foi produzido usando rbase.
+- O material para estudo(scripts) foi produzido usando rbase.
 
-\- A apostila foi produzida utilizando o Rmarkdown
+- A apostila foi produzida utilizando o Rmarkdown
 
 
 
