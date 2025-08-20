@@ -2,7 +2,7 @@
 
 
 
-Este repositório contém os \*\*dados\*\* e \*\*scripts de aula\*\* do curso de Introdução ao R, feito para alunos de graduação em Nutrição e Metabolismo da USP.
+Este repositório contém os **dados** e **scripts de aula** do curso de Introdução ao R, feito para alunos de graduação em Nutrição e Metabolismo da USP.
 
 
 
