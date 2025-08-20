@@ -1,4 +1,4 @@
-\# Introdução ao R - Nutrição e Metabolismo (USP)
+# Introdução ao R - Nutrição e Metabolismo (USP)
 
 
 
@@ -6,15 +6,15 @@ Este repositório contém os **dados** e **scripts de aula** do curso de Introdu
 
 
 
-\## Como usar
+## Como usar
 
-1\. Clique em qualquer arquivo deste repositório.
+1. Clique em qualquer arquivo deste repositório.
 
-2\. Clique em "Download" (ou "Raw" → "Salvar como").
+2. Clique em "Download" (ou "Raw" → "Salvar como").
 
-3\. Abra no RStudio.
+3. Abra no RStudio.
 
-4\. Execute os comandos seguindo a ordem das aulas.
+4. Execute os comandos seguindo a ordem das aulas.
 
 
 
