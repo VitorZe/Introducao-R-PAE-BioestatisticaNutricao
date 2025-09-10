@@ -32,7 +32,7 @@ Este repositório contém os **dados** e **scripts de aula** do curso de Introdu
 
 - O material para estudo(scripts) funciona sem necessidade de escrever algo no código, mas é encorajado brincar com o script, testar coisas e ver o que acontece.
 
-- A apostila produzida utilizando o Rmarkdown.
+- Apostila produzida utilizando o Rmarkdown.
 
 
 
