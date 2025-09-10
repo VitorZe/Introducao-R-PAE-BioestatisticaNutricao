@@ -30,9 +30,9 @@ Este repositório contém os **dados** e **scripts de aula** do curso de Introdu
 
 - Não é necessário instalar bibliotecas extras.
 
-- O material para estudo(scripts) foi produzido usando rbase.
+- O material para estudo(scripts) funciona sem necessidade de escrever algo no código, mas é encorajado brincar com o script, testar coisas e ver o que acontece.
 
-- A apostila foi produzida utilizando o Rmarkdown
+- A apostila produzida utilizando o Rmarkdown.
 
 
 
