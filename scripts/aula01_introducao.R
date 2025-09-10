@@ -102,8 +102,28 @@ boxplot(dados$altura,
 ## Aqui vemos como selecionar, usamos os "[]"
 dados$altura[dados$altura == 18.95]
 
+#dados[filtro para linhas, filtro para colunas]
+#aqui escolhemos a coluna"altura" e selecionamos a linha onde a altura é igual a 18.95
+#poderiamos escolher a coluna "sexo" onde a altura fosse igual a 18.95
+dados$sexo[dados$altura == 18.95]
 dados$altura[dados$altura == 18.95] <- 1.895
 dados[dados$altura == 18.95, ]
+
+dados[dados$altura < 1, ]
+
+dados$altura[dados$altura < 0.182] <- 1.82
+
+dados$altura
+
+boxplot(dados$peso, 
+        horizontal = TRUE,
+        main = "distribuição do peso",
+        xlab = "Peso (kg)")
+
+#Avaliando a relação entre peso e consumo diario de proteina em gramas
+plot(dados$peso, dados$proteina_g)
+
+dados[dados$peso > 90,]
 
 #Busque o outro outlier e corrija
 plot(dados$peso, dados$altura)
