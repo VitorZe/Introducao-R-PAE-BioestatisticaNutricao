@@ -5,25 +5,45 @@
 # Comentários em R começam com "#"
 # Você pode usar o console (embaixo) para rodar linhas soltas
 # ou salvar seus códigos em arquivos .R (como este).
+# Geral: Nao precisa decorar nada, só lembrar que da pra fazer
 
-
-# Operações matemáticas básicas
+#O que da pra fazer?
+##  Operações matemáticas básicas
 2 + 2
 5 * 3
 10 / 2
 2^3
 
-# "Criando" objetos 
-x <- 5
-y <- 10
 
-#Realize operações de soma, multiplicação, divisão e potenciação com as duas variáveis:
 
+log(2)
+
+##  "Criando" objetos/variáveis
+peso <- 50 
+altura <- 1.60
+
+#EXERCÍCIO: compute o IMC:
+peso/altura^2
+
+##EXTRA, saída mais bonitinha: função cat(), concatena objetos, nesse caso, textos e variáveis
+cat("IMC: ", peso*altura^2, "kg/m²")
 # Vetores
 ## São objetos com mais de um valor armazenado
-idades <- c(21, 23, 20, 22, 24, 18, 21, 26, 22, 21, 20, 28)
-peso <-   c(21, 23, 20, 22, 24, 18, 21, 26, 22, 21, 20, 28)
-plot(idade, peso)
+idades <- c(21, 23, 20, 22, 24, 18, 21, 26, 22.1, 21.2, 20, 28, 27, 23,
+            21, 24, 21, 21, 23, 19, 21.2, 25.6, 18.1, 18.3, 19, 20, 17, 24)
+
+
+plot(idades)
+## Missings
+### Descreve missings
+##
+# Funções
+mean(idades)  
+#Erro
+
+##Argumentos na.rm
+
+## Na documentação, ou na barra de pesquisa, é possivel buscar uma função e ler os argumentos
 ##Realize operações com o vetor 'idades'
 
 
@@ -35,7 +55,9 @@ sum(idades)      # somatório
 
 ## Crie um vetor, de alguma variável (numérica) que faça parte do seu cotidiano, com 5 ou mais observações
 
+
 ## Descreva esse com as funções básicas
+
 
 ##A média e a mediana foram próximas? se sim, ou se não, você acredita que isso aconteceu por qual razão?
 
@@ -44,8 +66,9 @@ sum(idades)      # somatório
 # Visualizações
 hist(idades) #Histograma
 stripchart(idades) #Grafico de pontos
+stripchart(log(idades), method = "stack") #Grafico de pontos empilhados
+stripchart(exp(idades), method = "stack") #Grafico de pontos empilhados
 stripchart(idades, method = "stack") #Grafico de pontos empilhados
-plot(idades, peso) 
 
 
 # O conceito de 'working directory
@@ -54,17 +77,20 @@ plot(idades, peso)
 ## "Session" -> "Set Working Directory" -> "To source file location"
 ## Assim, agora os arquivos que você for abrir, ou salvar, estarão no mesmo lugar
 
-# Data frame
-## Estrutura do R mais comumente utilizada, seria o formato de tabela, onde temos colunas e linhas
-## Antes de compreender e realizar manipulação de uma tabela, primeiro vamos entender um conjunto
+
 
 # Trabalhando com dados (iremos explorar mais na Aula 2)
-dados <- read.csv("https://raw.githubusercontent.com/VitorZe/Introducao-R-PAE-BioestatisticaNutricao/refs/heads/main/dados/dieta.csv")
+dados <- read.csv("https://raw.githubusercontent.com/VitorZe/Introducao-R-PAE-BioestatisticaNutricao/refs/heads/main/dados/dadosNutri.csv")
 #head() vai trazer as 5 primeiras observações
 head(dados)
 #View() vai trazer a visualização em formato de tabela
 View(dados)
 
+
+plot(dados$peso, dados$altura)
+#
+# boxplot(x, grupo)
+## 
 
 # Selecionar Coluna
 
@@ -72,6 +98,7 @@ View(dados)
 
 # Selecionar observação (Coluna x Linha)
 
+# Seleção condicional df[df[, a] == "x",]
 #Operações
 ## Generalizadas
 ###
