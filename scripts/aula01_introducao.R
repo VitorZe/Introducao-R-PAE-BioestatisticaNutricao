@@ -81,12 +81,31 @@ stripchart(idades, method = "stack") #Grafico de pontos empilhados
 
 # Trabalhando com dados (iremos explorar mais na Aula 2)
 dados <- read.csv("https://raw.githubusercontent.com/VitorZe/Introducao-R-PAE-BioestatisticaNutricao/refs/heads/main/dados/dadosNutri.csv")
+setwd("/Caminho/daSua/Pasta")
+dados <- read.csv("")
+
 #head() vai trazer as 5 primeiras observações
 head(dados)
 #View() vai trazer a visualização em formato de tabela
 View(dados)
 
+hist(dados$peso)
+hist(dados$altura)
+summary(dados$peso)
+summary(dados$altura)
 
+
+boxplot(dados$altura, 
+        horizontal = TRUE,
+        main = "distribuição das alturas")
+##Ajustar
+## Aqui vemos como selecionar, usamos os "[]"
+dados$altura[dados$altura == 18.95]
+
+dados$altura[dados$altura == 18.95] <- 1.895
+dados[dados$altura == 18.95, ]
+
+#Busque o outro outlier e corrija
 plot(dados$peso, dados$altura)
 #
 # boxplot(x, grupo)
