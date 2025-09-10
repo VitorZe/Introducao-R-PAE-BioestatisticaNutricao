@@ -1,4 +1,4 @@
-# Introdução ao R - Nutrição e Metabolismo (USP)
+# Introdução ao R - Bioestatística (Grauação em Nutrição e BioMed USP)
 
 
 
