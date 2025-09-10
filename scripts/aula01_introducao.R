@@ -29,8 +29,11 @@ peso/altura^2
 cat("IMC: ", peso*altura^2, "kg/m²")
 # Vetores
 ## São objetos com mais de um valor armazenado
-idades <- c(21, 23, 20, 22, 24, 18, 21, 26, 22.1, 21.2, 20, 28, 27, 23,
-            21, 24, 21, 21, 23, 19, 21.2, 25.6, 18.1, 18.3, 19, 20, 17, 24)
+idades <- c(
+  18, 19, 20, 21, 21, 22, 22, 23, 23, 24,
+  24, 25, 25, 25, 26, 26, 27, 27, 28, 28,
+  29, 29, 30, 30, 31, 32, 33, 34, 35, 36
+)
 
 
 plot(idades)
@@ -67,8 +70,20 @@ sum(idades)      # somatório
 hist(idades) #Histograma
 stripchart(idades) #Grafico de pontos
 stripchart(log(idades), method = "stack") #Grafico de pontos empilhados
-stripchart(exp(idades), method = "stack") #Grafico de pontos empilhados
-stripchart(idades, method = "stack") #Grafico de pontos empilhados
+stripchart(exp(idades), method = "stack", add = TRUE) #Grafico de pontos empilhados
+
+boxplot(idades, horizontal = T)
+stripchart(idades, 
+           method = "stack", 
+           pch = 19,
+           add = T) #Grafico de pontos empilhados
+
+boxplot(idades, horizontal = T)
+stripchart(idades, 
+           method = "jitter", 
+           pch = 19,
+           add = T) #Grafico de pontos empilhados
+
 
 
 # O conceito de 'working directory
@@ -81,16 +96,25 @@ stripchart(idades, method = "stack") #Grafico de pontos empilhados
 
 # Trabalhando com dados (iremos explorar mais na Aula 2)
 dados <- read.csv("https://raw.githubusercontent.com/VitorZe/Introducao-R-PAE-BioestatisticaNutricao/refs/heads/main/dados/dadosNutri.csv")
-setwd("/Caminho/daSua/Pasta")
-dados <- read.csv("")
+#setwd("/Caminho/daSua/Pasta")
 
 #head() vai trazer as 5 primeiras observações
 head(dados)
-#View() vai trazer a visualização em formato de tabela
+#View() vai trazer a visualização em formato de tabela em outra aba
 View(dados)
 
+# INVESTIGAÇÃO
 hist(dados$peso)
 hist(dados$altura)
+
+#Util para variaveis quantitativas
+summary(dados)
+#Util para variaveis qualitativas
+table(dados$sexo)
+
+cor(x = dados$peso, y = dados$altura)
+
+#Investigando peso e altura
 summary(dados$peso)
 summary(dados$altura)
 
@@ -100,7 +124,14 @@ boxplot(dados$altura,
         main = "distribuição das alturas")
 ##Ajustar
 ## Aqui vemos como selecionar, usamos os "[]"
-dados$altura[dados$altura == 18.95]
+dados[dados$altura > 2.5, ]
+# " | " se refere a um "OU" outro, podemos usar o &, que seria um "E" outro
+#">=" ou "<=" para menor ou igual a, "<" e ">" maior ou menor que
+#"!= (! = sem espaço)" para "diferente de ou "=="  para "igual a"
+dados[dados$altura > 2.5 | dados$altura < 1.3, ]
+
+
+
 
 #dados[filtro para linhas, filtro para colunas]
 #aqui escolhemos a coluna"altura" e selecionamos a linha onde a altura é igual a 18.95
@@ -109,9 +140,8 @@ dados$sexo[dados$altura == 18.95]
 dados$altura[dados$altura == 18.95] <- 1.895
 dados[dados$altura == 18.95, ]
 
-dados[dados$altura < 1, ]
 
-dados$altura[dados$altura < 0.182] <- 1.82
+
 
 dados$altura
 
